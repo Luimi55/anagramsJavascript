@@ -9,5 +9,10 @@ describe("All test of Anagrams", () => {
 
     })
 
+    it("Verify that there are anagrams", () => {
+        const array = ["frase", "fresa", "hola", "adios"];
+        expect(File.AreAnagrams(array)).toBe(true);
+
+    })
 
 })
