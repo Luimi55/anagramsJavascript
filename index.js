@@ -23,5 +23,14 @@ const File = module.exports = {
         }
 
         return anagrams
-    }
+    },
+
+    ShowAnagrams : (anagrams) => {
+        for(let v of anagrams.values())
+        if(v.length > 1) console.log(v)
+    },
+
 }
+
+const r = File.AreAnagrams()
+File.ShowAnagrams(r)
