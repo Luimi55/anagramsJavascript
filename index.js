@@ -1,6 +1,6 @@
 const fs = require("fs");
 const words = fs.readFileSync("./Anagrams.txt").toString().split("\n");
-
+const startTime = Date.now()
 const File = module.exports = {
 
     PathExists: () => {
@@ -28,10 +28,21 @@ const File = module.exports = {
     CountAnagrams: (anagrams) => {
         let count = 0;
         for(let v of anagrams.values()){
-            if(v.lenght > 1) count++
+            if(v.length > 1) count++
         }
 
         return count
+    },
 
+    showAnagrams: () => {
+        for(let v of anagrams.values())
+            if(v.length > 1) console.log(v)
+    },
+
+    AnagramsDuration: () => {
+        const duration = Date.now() - startTime
+        return duration 
     }
+
+
 }

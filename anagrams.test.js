@@ -19,4 +19,8 @@ describe("All test of Anagrams", () => {
         expect(File.CountAnagrams(File.AreAnagrams())).toBe(20683)
     })
 
+    it("Check is the duration is less than 2 seconds", () => {
+        expect(File.AnagramsDuration()).toBeLessThan(2000)
+    })
+
 })
