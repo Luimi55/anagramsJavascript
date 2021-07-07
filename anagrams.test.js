@@ -15,4 +15,8 @@ describe("All test of Anagrams", () => {
 
     })
 
+    it("Verify if amount of anagrams is 20683", () => {
+        expect(File.CountAnagrams(File.AreAnagrams())).toBe(20683)
+    })
+
 })
